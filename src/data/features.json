@@ -1,0 +1,32 @@
+[
+  [
+    "notifications",
+    "Notifications",
+    "Keep the community informed with instant notifications. Schools can send messages about closings, delays, event cancelations, and more."
+  ],
+  [
+    "event",
+    "Calendar",
+    "Give people a place to view all of your events. Users can receive notifications about events and categories by subscribing to them."
+  ],
+  [
+    "directions_run",
+    "Sports",
+    "Schools - provide a single stop for all your district athletic info. Show rosters, schedules, scores, and notices. Users can subscribe to a team to be notified about upcoming games and schedule changes."
+  ],
+  [
+    "chrome_reader_mode",
+    "News Feed",
+    "Show all the latest news and photos in a single stream. Stories can be automatically pulled from your Facebook page or website, or be added directly to the app."
+  ],
+  [
+    "edit",
+    "Simple Content Management",
+    "All app content is managed through an easy to use dashboard. Administrators can add new users and control what they have access to."
+  ],
+  [
+    "settings",
+    "Custom Features",
+    "Any additional resources or features you need can be included in the app."
+  ]
+]
