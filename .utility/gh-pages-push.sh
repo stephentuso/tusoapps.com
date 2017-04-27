@@ -4,11 +4,8 @@ if [ "$TRAVIS_REPO_SLUG" == "stephentuso/tusoapps.com" ] && [ "$TRAVIS_PULL_REQU
     echo -e "\nPublishing to gh-pages..."
 
     cp -Rf dist/ $HOME/dist/
-    ls dist
 
     cd $HOME
-    
-    ls dist
     
     git config --global user.email "travis@travis-ci.org"
     git config --global user.name "travis-ci"
@@ -19,7 +16,10 @@ if [ "$TRAVIS_REPO_SLUG" == "stephentuso/tusoapps.com" ] && [ "$TRAVIS_PULL_REQU
     echo -e "\nReplacing files..."
     cd gh-pages
     git rm -rf .
-    cp -Rf $HOME/dist/ $HOME/gh-pages
+    cp -Rf $HOME/dist/ ../gh-pages #???
+    ls
+    cp -Rf dist/ . #???
+    rm -rf dist
     git add -f .
     git commit -m "Update website (travis build #$TRAVIS_BUILD_NUMBER)"
     
