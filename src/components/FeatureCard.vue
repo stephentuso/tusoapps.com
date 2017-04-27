@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="card-outline full-height">
+    <div>
       <div class="item">
         <i class="item-primary">{{ icon }}</i>
         <h6 class="item-content">

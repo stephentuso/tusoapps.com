@@ -10,18 +10,33 @@
         <h2>Apps for schools, businesses, and organizations</h2>
       </div>
       <div>
-        <div class="row">
-          <feature-block class="width-1of2" image-url="statics/nelson_android_frame.jpg" title="Nelson County Schools" description="something"></feature-block>
-          <feature-block class="width-1of2" image-url="statics/nbs_ios_frame1.jpg" title="North Branch School" description="something"></feature-block>
+        <div class="flex wrap">
+          <feature-block v-for="client in clients"
+                         :key="client[0]"
+                         class="width-1of2"
+                         :image-url="client[0]"
+                         :title="client[1]"
+                         :description="client[2]"
+                         :links="client[3]"
+          ></feature-block>
         </div>
       </div>
-      <div class="container padded">
+      <div class="container padded-top padded-bottom">
         <div class="flex wrap gutter">
           <template v-for="feature in features">
             <feature-card class="width-1of2" :icon="feature[0]" :title="feature[1]" :description="feature[2]"></feature-card>
           </template>
         </div>
       </div>
+      <div class="contact text-center">
+        <h5>Connect to your community.</h5>
+        <p>For pricing and details:</p>
+        <p><a href="mailto:contact@tusoapps.com"><button class="white ">Contact</button></a></p>
+        <p>contact@tusoapps.com | 434-226-4769</p>
+      </div>
+      <footer class="text-center">
+        <p>© 2017 Tuso Apps</p>
+      </footer>
     </div>
   </q-layout>
 </template>
@@ -38,12 +53,23 @@
 
     data () {
       return {
-        features: require('../data/features.json')
+        features: require('../data/features.json'),
+        clients: require('../data/clients.json')
       }
-    },
-
-    methods: {
-
     }
   }
 </script>
+
+<style lang="scss">
+  .contact {
+    background: #2b84ac;
+    padding: 30px;
+    color: white;
+
+    h5 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+    }
+
+  }
+</style>

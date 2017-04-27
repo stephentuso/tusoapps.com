@@ -1,0 +1,32 @@
+[
+  [
+    "statics/nelson_android_frame.jpg",
+    "Nelson County Schools",
+    "Android and iPhone apps keep Nelson County up to date with news, sports schedule and scores, events, and more.",
+    [
+      {
+        "label": "Google Play",
+        "url": "https://play.google.com/store/apps/details?id=com.tusoapps.nelsoncountyps"
+      },
+      {
+        "label": "App Store",
+        "url": "https://geo.itunes.apple.com/us/app/nelson-county-public-schools/id1035172103?mt=8"
+      }
+    ]
+  ],
+  [
+    "statics/nbs_ios_frame1.jpg",
+    "North Branch School",
+    "Android and iPhone apps with news, events, customizable notifications, and more. News is automatically pulled from the North Branch Website.",
+    [
+      {
+        "label": "Google Play",
+        "url": "https://play.google.com/store/apps/details?id=com.tusoapps.northbranchschool"
+      },
+      {
+        "label": "App Store",
+        "url": "https://itunes.apple.com/us/app/north-branch-school/id1135309244?mt=8"
+      }
+    ]
+  ]
+]

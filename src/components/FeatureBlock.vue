@@ -7,6 +7,9 @@
       <h2 class="title">{{ title }}</h2>
       <br>
       <p class="description">{{ description }}</p>
+      <div class="links flex wrap">
+        <a v-for="link in links" :key="link.url" :href="link.url"><button class="light outline">{{ link.label }}</button></a>
+      </div>
     </div>
   </div>
 </template>
@@ -18,6 +21,7 @@ export default {
     imageUrl: String,
     title: String,
     description: String,
+    links: Array,
     backgroundColor: {
       type: String,
       default: '#666'
@@ -66,7 +70,7 @@ export default {
   }
 
   .base:hover .background-dimmer {
-    opacity: 0.5;
+    opacity: 0.8;
   }
 
   .title {
@@ -86,12 +90,25 @@ export default {
     transform: scaleX(1);
   }
 
-  .description {
+  .description, .links {
     opacity: 0;
     transition: opacity 0.5s ease;
   }
 
-  .base:hover .description {
+  .base:hover .description, .base:hover .links {
     opacity: 1;
+  }
+
+  a {
+    color: white;
+    margin-right: 20px;
+  }
+
+  button.outline {
+    color: white !important;
+  }
+
+  a:hover, button.outline:hover {
+    color: black !important;
   }
 </style>
