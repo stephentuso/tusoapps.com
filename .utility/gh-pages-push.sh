@@ -3,7 +3,7 @@ echo -e "\nChecking conditions.."
 if [ "$TRAVIS_REPO_SLUG" == "stephentuso/tusoapps.com" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; then
     echo -e "\nPublishing to gh-pages..."
 
-    cp -R dist $HOME/dist
+    cp -Rf dist/ $HOME/dist/
 
     cd $HOME
     git config --global user.email "travis@travis-ci.org"
