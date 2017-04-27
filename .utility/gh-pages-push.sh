@@ -15,7 +15,7 @@ if [ "$TRAVIS_REPO_SLUG" == "stephentuso/tusoapps.com" ] && [ "$TRAVIS_PULL_REQU
     echo -e "/nReplacing files..."
     cd gh-pages
     git rm -rf .
-    cp -Rf $HOME/dist/ .
+    cp -Rf $HOME/dist/ $HOME/gh-pages/
     git add -f .
     git commit -m "Update website (travis build #$TRAVIS_BUILD_NUMBER)"
 
