@@ -7,13 +7,13 @@
     </div>
     <div class="layout-view">
       <div class="header text-center">
-        <h2>Apps for schools, businesses, and organizations</h2>
+        <h2 class="responsive">Apps for schools, businesses, and organizations</h2>
       </div>
       <div>
-        <div class="flex wrap">
-          <feature-block v-for="client in clients"
+        <div class="flex wrap lt-md-1-5-column">
+          <feature-block class="width-1of2"
+                         v-for="client in clients"
                          :key="client[0]"
-                         class="width-1of2"
                          :image-url="client[0]"
                          :title="client[1]"
                          :description="client[2]"
@@ -22,7 +22,7 @@
         </div>
       </div>
       <div class="container padded-top padded-bottom">
-        <div class="flex wrap gutter">
+        <div class="flex wrap gutter sm-column">
           <template v-for="feature in features">
             <feature-card class="width-1of2" :icon="feature[0]" :title="feature[1]" :description="feature[2]"></feature-card>
           </template>

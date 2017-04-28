@@ -4,7 +4,7 @@
     <div class="background-img absolute-top-left fit" :style="backgroundStyle"></div>
     <div class="background-dimmer absolute-top-left fit"></div>
     <div class="content">
-      <h2 class="title">{{ title }}</h2>
+      <h2 class="title responsive">{{ title }}</h2>
       <br>
       <p class="description">{{ description }}</p>
       <div class="links flex wrap">
