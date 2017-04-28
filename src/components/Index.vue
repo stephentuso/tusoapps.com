@@ -32,7 +32,7 @@
         <h5>Connect to your community.</h5>
         <p>For pricing and details:</p>
         <p><a href="mailto:contact@tusoapps.com"><button class="white ">Contact</button></a></p>
-        <p>contact@tusoapps.com | 434-260-7840</p>
+        <p>contact@tusoapps.com</p>
       </div>
       <footer class="text-center">
         <p>© 2017 Tuso Apps</p>
