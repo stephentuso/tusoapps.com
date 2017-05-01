@@ -4,6 +4,7 @@ if [ "$TRAVIS_REPO_SLUG" == "stephentuso/tusoapps.com" ] && [ "$TRAVIS_PULL_REQU
     echo -e "\nPublishing to gh-pages..."
 
     cp -Rf dist/ $HOME/dist/
+    cp CNAME $HOME/CNAME
 
     cd $HOME
     
@@ -17,6 +18,7 @@ if [ "$TRAVIS_REPO_SLUG" == "stephentuso/tusoapps.com" ] && [ "$TRAVIS_PULL_REQU
     cd gh-pages
     git rm -rf .
     cp -RTf ../dist/ ./
+    cp ../CNAME ./CNAME
     git add -f .
     git commit -m "Update website (travis build #$TRAVIS_BUILD_NUMBER)"
     
