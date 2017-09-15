@@ -8,15 +8,22 @@
       <br>
       <p class="description">{{ description }}</p>
       <div class="links flex wrap">
-        <a v-for="link in links" :key="link.url" :href="link.url"><button class="light outline">{{ link.label }}</button></a>
+        <a v-for="link in links" :key="link.url" :href="link.url">
+          <q-btn color="light" outline class="light outline">
+            {{ link.label }}
+          </q-btn>
+        </a>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { QBtn } from 'quasar-framework'
 export default {
-
+  components: {
+    QBtn
+  },
   props: {
     imageUrl: String,
     title: String,
@@ -47,68 +54,60 @@ export default {
 </script>
 
 <style scoped>
-  .base {
-    height: 400px;
-    color: white;
-    position: relative;
-    padding: 24px;
-  }
+.base {
+  height: 400px;
+  color: white;
+  position: relative;
+  padding: 24px;
+}
 
-  .background-color {
-    z-index: -101;
-  }
+.background-color {
+  z-index: -101;
+}
 
-  .background-img {
-    z-index: -100;
-  }
+.background-img {
+  z-index: -100;
+}
 
-  .background-dimmer {
-    background-color: black;
-    opacity: 0.3;
-    z-index: -99;
-    transition: opacity 0.5s ease;
-  }
+.background-dimmer {
+  background-color: black;
+  opacity: 0.3;
+  z-index: -99;
+  transition: opacity 0.5s ease;
+}
 
-  .base:hover .background-dimmer {
-    opacity: 0.8;
-  }
+.base:hover .background-dimmer {
+  opacity: 0.8;
+}
 
-  .title {
-    display: inline-block;
-  }
+.title {
+  display: inline-block;
+}
 
-  .title:after {
-    display:block;
-    content: '';
-    border-bottom: solid 3px white;
-    transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
-    transform-origin:  0 50%;
-  }
+.title:after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px white;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+  transform-origin:  0 50%;
+}
 
-  .base:hover .title:after {
-    transform: scaleX(1);
-  }
+.base:hover .title:after {
+  transform: scaleX(1);
+}
 
-  .description, .links {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
+.description, .links {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
 
-  .base:hover .description, .base:hover .links {
-    opacity: 1;
-  }
+.base:hover .description, .base:hover .links {
+  opacity: 1;
+}
 
-  a {
-    color: white;
-    margin-right: 20px;
-  }
-
-  button.outline {
-    color: white !important;
-  }
-
-  a:hover, button.outline:hover {
-    color: black !important;
-  }
+a {
+  color: white;
+  margin-right: 20px;
+}
 </style>
