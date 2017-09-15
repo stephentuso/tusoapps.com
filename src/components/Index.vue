@@ -32,7 +32,7 @@
         <h5>Connect to your community.</h5>
         <p>For pricing and details:</p>
         <p><a href="mailto:contact@tusoapps.com">
-          <q-btn color="white" class="text-blue">Contact</q-btn>
+          <q-btn class="bg-white text-primary">Contact</q-btn>
         </a></p>
         <p>contact@tusoapps.com</p>
       </div>
